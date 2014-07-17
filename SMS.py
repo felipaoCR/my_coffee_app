@@ -4,13 +4,13 @@ import sys
 from twilio.rest import TwilioRestClient
 from twilio import TwilioRestException
 
-twilio_id = 'AC84680652a2e3a197af7ac005adbd96f0'
+twilio_id = 'Your twilio API id'
 
-twilio_auth_token ='2c9cb5aed79c8854db7c7cb988a84479' 
+twilio_auth_token ='Your twilio authorization token' 
 
-my_phone_number = '+50683058156'
+my_phone_number = 'Your phone number (extension included)'
 
-twilio_number = '+17865742721'
+twilio_number = 'Your twilio number (the one with a plus sign)'
 
 def sendSMS():
 
