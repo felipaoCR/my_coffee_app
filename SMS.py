@@ -12,11 +12,11 @@ my_phone_number = 'Your phone number (extension included)'
 
 twilio_number = 'Your twilio number (the one with a plus sign)'
 
-def sendSMS():
+def sendSMS(message):
 
 	try:
 		client = TwilioRestClient(twilio_id, twilio_auth_token)
-		message = client.sms.messages.create(body = "Making coffee ...",to =my_phone_number, from_=twilio_number)
+		message = client.sms.messages.create(body = message,to =my_phone_number, from_=twilio_number)
 		print "SMS sent"
 	except TwilioRestException as e:
 		print "Couldn't send message: %s" % e
