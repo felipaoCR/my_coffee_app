@@ -41,7 +41,7 @@ def main():
 			print "Making coffee ..."
 		
 			arduino = serial.Serial(duinoPort,9600)
-			msg.sendSMS()
+			msg.sendSMS("Making coffee ...")
 
 			while flag:
 				try:
@@ -51,6 +51,7 @@ def main():
 					if instruction == "Maybe I don´t want coffee":
 						print "Application will now exit ..."
 						arduino.close()
+						msg.sendSMS("The coffee app has stopped ...")	
 						flag = False
 						break
 					else:
