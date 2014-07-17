@@ -1,7 +1,7 @@
 my coffee app
 =============
 
-A tipycall controlled app in which an arduino takes a twitter message and turns it into coffee 
+A tipycall controlled app in which an arduino takes a Twitter message and turns it into coffee 
 
 my_coffee_app uses a Python script to establish a serial connection with an Arduino Uno, which takes an input signal from the script and sends a +5 volts signal to one of its digital pins, which we'll consider as the Arduino's outputs and the coffee maker's inputs (coffee will be written with a capital c from now on, since we love Coffee).
 
@@ -15,7 +15,7 @@ A Coffee maker.
 
 A power switch tail (with relays).
 
-A twitter account.
+A Twitter account.
 
 To control the flow of current through the Coffee maker, relays are prefered. Relays are current-controlled switches that let current flow whenever the coil within the relay gets some current...
 
