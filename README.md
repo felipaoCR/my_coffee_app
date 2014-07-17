@@ -9,10 +9,10 @@ I'll split this project into three parts, the Python code, the Arduino code and 
 
 In order to make our Coffee maker work as we want it to, you'll need four components:
 
--An Arduino UNO
--A Coffee maker
--A power switch tail (with relays)
--A twitter account
+-An Arduino UNO.
+-A Coffee maker.
+-A power switch tail (with relays).
+-A twitter account.
 
 To control whenever current flows through the Coffee maker, relays are prefered. Relays are current-controlled switches that let current flow whenever the coil within the relay gets some current...
 
