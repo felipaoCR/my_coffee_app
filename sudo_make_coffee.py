@@ -18,7 +18,7 @@ api = twitter.Api(API1,API2,AC1,AC2)
 def updateInstruction():
 	
 	try:
-		timeline = api.GetUserTimeline(2648345150)
+		timeline = api.GetUserTimeline("put your twitter id number")
 		inst = [u.text for u in timeline][0]
 		return inst
 	except KeyboardInterrupt as e:
