@@ -20,4 +20,4 @@ void loop()
       digitalWrite(output1, LOW);  //If not, then do nothing
       digitalWrite(output2, LOW);
     }  
-}
+} 
