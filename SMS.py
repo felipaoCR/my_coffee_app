@@ -17,7 +17,7 @@ def sendSMS():
 	try:
 		client = TwilioRestClient(twilio_id, twilio_auth_token)
 		message = client.sms.messages.create(body = "Making coffee ...",to =my_phone_number, from_=twilio_number)
-		print "Mensaje enviado"
+		print "SMS sent"
 	except TwilioRestException as e:
 		print "Couldn't send message: %s" % e
 		sys.exit(0)
