@@ -16,7 +16,7 @@ A Coffee maker.
 A power switch tail (with relays).
 
 
-To control the flow of current through the Coffee maker, relays are prefered. Relays are current-controlled switches that let current from the wall outlet flow, whenever the coil within the relay gets some current. Usually, relays need more electric current than the Arduino can provide. To fix this, a transistor it's needed. However, the power switch tail can be powered only with the small output Arduino current, so no transistors are required (Yayyy!). 
+To control the flow of current through the Coffee maker, relays are prefered. Relays are current-controlled switches that let current from the wall outlet flow, whenever the coil within the relay gets some current. Usually, relays need more electric current than the Arduino can provide. To fix this, a transistor it's needed. However, the power switch tail can be powered only with the small Arduino´s output current, so no transistors are required (Yayyy!). 
 
 Python script
 =============
