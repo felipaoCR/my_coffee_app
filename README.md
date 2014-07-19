@@ -19,13 +19,13 @@ A power switch tail (with relays).
 To control the flow of current through the Coffee maker, relays are prefered. Relays are current-controlled switches that let current from the wall outlet flow, whenever the coil within the relay gets some current. Usually, relays need more electric current than the Arduino can provide, to fix this, a transistor it's needed. However, the power switch tail can be powered only with the small output Arduino current, so no transistors are required (Yayyy!). 
 
 Python script
-======
+=============
 
 
 This script is used to communicate your Twitter messages to your computer and then your computer sends data to the Arduino in order to turn off and on the power switch tail. There's a Twitter Python library which you'll have to pip install. This will allow you to get the timeline messsages you post, and then compare them to your "make coffee" command, using string comparison (I used the boolean comparators == , !=). If your timeline message is not a duplicate and is equal to your "make coffee" command, then with the help of the Python Serial lib, the script will send data to the Arduino by calling the write function.
 
 Firmware (Arduino code)
+=============
 
-This code basically sends a HIGH signal to one of the power switch tail inputs, when it gets data from the computer. 
+This code basically sends a HIGH signal to one of the power switch tail inputs, when it gets data from the computer. Once the data is received, using the Serial functions of Arduino, a call to the Serial.available() function is made, in order to check if there´s data in the incoming buffer. Once this buffer gets data, the Arduino has to check whether it´s getting bytes or not, by calling the Serial.read() function. If not, then a LOW signal (0 volts) is sent to the switch. This is made so when the user wants to stop making coffee, the Arduino won´t power the coffee machine. That is, to close the serial ports of the Python scripts, and there will be a time when the Serial.read() function will return -1. Since I´m doing this project on my Raspberry Pi, I added a one second delay after I call the write function, because I didn´t want to test my Raspberry´s CPU. Because of that, I put a three seconds delay to give the Arduino some time to read its input buffer. Feel free to play with these delays.   
 
-This project is currently being developed, I'll upload the source code and complete this readme within the next 15 days
