@@ -22,7 +22,7 @@ Python script
 =============
 
 
-This script is used to communicate your Twitter messages to your computer and then your computer sends data to the Arduino in order to turn off and on the power switch tail. There's a Twitter Python library which you'll have to pip install. This will allow you to get the timeline messsages you post, and then compare them to your "make coffee" command, using string comparison (I used the boolean comparators == , !=). If your timeline message is not a duplicate and is equal to your "make coffee" command, then with the help of the Python Serial lib, the script will send data to the Arduino by calling the write function.
+This script is used to communicate your Twitter messages to your computer, and then your computer sends data to the Arduino in order to turn off and on the power switch tail. There's a Twitter Python library which you'll have to pip install (sudo pip install twitter). This will allow you to get the timeline messages you post, and then compare them to your "make coffee" command, using string comparison (I used the boolean comparators == , !=). If your timeline message is not a duplicate and is equal to your "make coffee" command, then with the help of the Python Serial lib, the script will send data to the Arduino by calling the write function.
 
 Firmware (Arduino code)
 =============
