@@ -5,7 +5,7 @@ A tipycall controlled app in which an arduino takes a Twitter message and turns 
 
 my_coffee_app uses a Python script to establish a serial connection with an Arduino Uno, which takes an input signal from the script and sends a +5 volts signal to one of its digital pins, which we'll consider as the Arduino's outputs and the coffee maker's inputs.
 
-I'll split up this project into two parts, the Python and the Arduino code. The Arduino code is self-explanatory once you get to see it, so I won't be giving it a lot of explanation... plus, it's not larger than thirty lines of code. I'll also assume you are on a Linux system and have a simple non-programmable Coffee maker. There's not much diference from a Linux based OS from a Windows OS or Mac OS in order for this project to work, so feel free to use this code as long as you adapt it to your system.
+I'll split up this project into two parts, the Python and the Arduino code. The Arduino code is self-explanatory once you get to see it, so I won't be giving it a lot of explanation... plus, it's not larger than thirty lines of code. 
 
 In order to make our Coffee maker work as we want it to, you'll need three components and a Twitter account:
 
@@ -22,7 +22,7 @@ Python script
 =============
 
 
-This script is used to communicate your Twitter messages to your computer, and then your computer sends data to the Arduino in order to turn off and on the power switch tail. There's a Twitter Python library which you'll have to pip install (sudo pip install twitter). This will allow you to get the timeline messages you post, and then compare them to your "make coffee" command, using string comparison (I used the boolean comparators == , !=). If your timeline message is not a duplicate and is equal to your "make coffee" command, then with the help of the Python Serial lib, the script will send data to the Arduino by calling the write function.
+This script is used to communicate your Twitter messages to your computer, and then your computer sends data to the Arduino in order to turn off and on the power switch tail. There's a Twitter Python library which you'll have to pip install (sudo pip install twitter for Linux systems). This will allow you to get the timeline messages you post, and then compare them to your "make coffee" command, using string comparison (I used the boolean comparators == , !=). If your timeline message is not a duplicate and is equal to your "make coffee" command, then with the help of the Python Serial lib, the script will send data to the Arduino by calling the write function.
 
 Firmware (Arduino code)
 =============
