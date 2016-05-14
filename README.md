@@ -1,7 +1,7 @@
 my coffee app
 =============
 
-A tipycall controlled app in which an arduino takes a Twitter message and turns it into coffee 
+A Twitter controlled app in which an arduino takes a Twitter message and turns it into coffee 
 
 my_coffee_app uses a Python script to establish a serial connection with an Arduino Uno, which takes an input signal from the script and sends a +5 volts signal to one of its digital pins, which we'll consider as the Arduino's outputs and the coffee maker's inputs.
 
